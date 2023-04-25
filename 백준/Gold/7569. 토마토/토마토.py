@@ -4,11 +4,10 @@ input = sys.stdin.readline
 
 M, N, H = map(int, input().rstrip().split())
 
-tomatos = []
+tomatos = [[[0 for _ in range(M)] for _ in range(N)] for _ in range(H)]
 for h in range(H):
-    tomatos.append([])
     for n in range(N):
-        tomatos[h].append(list(map(int, input().split())))
+        tomatos[h][n] = list(map(int, input().split()))
  
 def bfs():
     q = deque()
